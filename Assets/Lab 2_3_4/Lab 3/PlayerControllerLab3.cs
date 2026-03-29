@@ -3,9 +3,9 @@ using UnityEngine;
 
 public class PlayerControllerLab3 : MonoBehaviour
 {
-    private float speed = 10;
+    private float speed = 50;
     private Rigidbody playerRb;
-    private float zBound = 6;
+    private float zBound = 10;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -37,6 +37,22 @@ public class PlayerControllerLab3 : MonoBehaviour
         if (transform.position.z > zBound)
         {
             transform.position = new Vector3(transform.position.x, transform.position.y, zBound);
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Enemy"))
+        {
+            Debug.Log("Player has collied with enemy");
+        }
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Powerup"))
+        {
+            Destroy(other.gameObject);
         }
     }
 }
