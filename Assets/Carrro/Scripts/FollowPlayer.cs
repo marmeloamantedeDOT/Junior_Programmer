@@ -3,10 +3,10 @@
 public class FollowPlayer : MonoBehaviour
 {
     public Transform player;
-    public Vector3 backViewOffset = new Vector3(0, 5, -10);
-    public Vector3 frontViewOffset = new Vector3(0, 3, 5);
-    public float smoothSpeed = 0.125f;
-    public float moveSpeed = 5f; // velocidade de movimento manual da câmara
+    [SerializeField] public Vector3 backViewOffset = new Vector3(0, 5, -10);
+    [SerializeField] public Vector3 frontViewOffset = new Vector3(0, 3, 5);
+    [SerializeField] public float smoothSpeed = 0.125f;
+    [SerializeField] public float moveSpeed = 5f; // velocidade de movimento manual da câmara
 
     private bool isFrontView = false;
 

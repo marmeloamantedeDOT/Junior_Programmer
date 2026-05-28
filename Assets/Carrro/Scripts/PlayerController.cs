@@ -22,7 +22,7 @@ public class PlayerController : MonoBehaviour
         rend = GetComponent<Renderer>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         h = Input.GetAxis("Horizontal");
         v = Input.GetAxis("Vertical");
@@ -52,8 +52,8 @@ public class PlayerController : MonoBehaviour
             isGrounded = false;
         }
 
-        // Mudar cor (pressionar C)
-        if (Input.GetKeyDown(KeyCode.C) && colors.Length > 0)
+        // Mudar cor (pressionar p)
+        if (Input.GetKeyDown(KeyCode.P) && colors.Length > 0)
         {
             colorIndex = (colorIndex + 1) % colors.Length;
             rend.material.color = colors[colorIndex];
