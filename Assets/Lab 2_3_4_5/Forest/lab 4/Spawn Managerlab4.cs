@@ -2,35 +2,35 @@ using UnityEngine;
 
 public class SpawnManagerlab4 : MonoBehaviour
 {
+
     public GameObject[] enemies;
     public GameObject powerup;
-
-    private float zEnemySpawn = 10;
-    private float xSpawnRange = 16;
-    private float zPowerupRange = 5;
+    private float zEnemySpawn = 12.0f;
+    private float xSpawnRange = 12.0f;
+    private float zPowerupRange = 5.0f;
     private float ySpawn = 0.75f;
 
-    private float startDelay = 1;
-    private float enemySpawnTime = 1;
-    private float powerupSpawnTime = 5;
+    private float powerupSpawnTime = 5.0f;
+    private float enemySpawnTime = 1.0f;
+    private float startDelay = 1.0F;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        InvokeRepeating("SpawnEnemy", startDelay, enemySpawnTime);
-        InvokeRepeating("SpawnPowerup", startDelay, powerupSpawnTime);
-        
+        InvokeRepeating("SpawnEnemy",startDelay, enemySpawnTime);
+        InvokeRepeating("SpawnPowerup",startDelay, powerupSpawnTime);
     }
 
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 
     void SpawnEnemy()
     {
         float randomX = Random.Range(-xSpawnRange, xSpawnRange);
-        int randomIndex = Random.Range(0, enemies.Length);
+        int randomIndex = Random.Range(0,enemies.Length);
 
         Vector3 spawnPos = new Vector3(randomX, ySpawn, zEnemySpawn);
 
@@ -42,7 +42,9 @@ public class SpawnManagerlab4 : MonoBehaviour
         float randomX = Random.Range(-xSpawnRange, xSpawnRange);
         float randomZ = Random.Range(-zPowerupRange, zPowerupRange);
 
-        Vector3 spawnPos = new Vector3(randomX, ySpawn, randomZ);
-        Instantiate(powerup, spawnPos, powerup.gameObject.transform.rotation);
+        Vector3 spawnPos = new Vector3(randomX,ySpawn,randomZ);
+
+        Instantiate(powerup,spawnPos,powerup.gameObject.transform.rotation);
+
     }
 }

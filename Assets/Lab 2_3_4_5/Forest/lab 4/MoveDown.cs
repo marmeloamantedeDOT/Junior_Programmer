@@ -1,10 +1,10 @@
 using UnityEngine;
 
-public class BasicMovent : MonoBehaviour
+public class MoveDown : MonoBehaviour
 {
-    public float speed = 2;
+    public float speed = 5.0f;
+    private float zDestroy = -10.0f;
     private Rigidbody objectRb;
-    private float zDestroy = -10;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7894029514207320884}
   - component: {fileID: 1233110489942799381}
   - component: {fileID: 1513333927714555871}
-  - component: {fileID: 398645115639931046}
+  - component: {fileID: 8400623412887160268}
   m_Layer: 0
   m_Name: Enemy 1
   m_TagString: Enemy
@@ -29,14 +29,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7989446901621475899}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: -0.70723015, z: 0, w: 0.7069834}
+  m_LocalRotation: {x: 0, y: -1, z: 0, w: 0}
   m_LocalPosition: {x: -4.250787, y: 1.46, z: 2.2486053}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 7385748968257515901}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: -90.02, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
 --- !u!33 &7229607676186171587
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -142,7 +142,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 4
   m_CollisionDetection: 0
---- !u!114 &398645115639931046
+--- !u!114 &8400623412887160268
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -153,7 +153,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a9eea62110c3f7c4fa04354c32452f53, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BasicMovent
+  m_EditorClassIdentifier: Assembly-CSharp::MoveDown
   speed: 5
 --- !u!1001 &7385748968257655051
 PrefabInstance:
